@@ -20,7 +20,7 @@ export const PdfExport = () => {
             const img = new Image();
             img.crossOrigin = 'anonymous';
             img.onload = () => {
-              pdf.addImage(img, 'JPEG', 0.25*(1920-img.width), 0.25 *(1080-img.height), 1440, 960);
+              pdf.addImage(img, 'JPEG', 0, 0, 1920, 1080);
               resolve(null);
             };
             img.onerror = reject;
